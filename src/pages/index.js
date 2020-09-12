@@ -12,7 +12,6 @@ const IndexPage = () => (
       <li>
         <Link
           to="/"
-          activeStyle={{ color: 'red' }}
         >
           Home
         </Link>
