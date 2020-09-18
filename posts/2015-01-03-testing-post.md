@@ -3,7 +3,7 @@ date: 2015-01-03 00:02:55
 title: Testing Post
 description: Test description
 category: Misc
-background: "#7AAB13"
+background: "#7AAF13"
 ---
 
 # Lorem

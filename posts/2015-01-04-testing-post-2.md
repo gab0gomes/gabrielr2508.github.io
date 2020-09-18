@@ -3,7 +3,7 @@ date: 2015-01-04 00:02:55
 title: Testing Post 2
 description: Test description 2
 category: JS
-background: "#7AAB13"
+background: "#7CAB13"
 ---
 
 # Lorem
