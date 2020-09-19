@@ -13,11 +13,10 @@ const Avatar = () => {
           }
         ) {
           childImageSharp {
-            fixed(
-              width: 60,
-              height: 60
+            fluid(
+              maxWidth: 60,
             ) {
-              ...GatsbyImageSharpFixed,
+              ...GatsbyImageSharpFluid,
             }
           }
         }
@@ -25,7 +24,7 @@ const Avatar = () => {
     `
   );
 
-  return <S.AvatarWrapper fixed={ avatarImage.childImageSharp.fixed } />;
+  return <S.AvatarWrapper fluid={ avatarImage.childImageSharp.fluid } />;
 };
 
 export default Avatar;
