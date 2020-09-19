@@ -2,6 +2,7 @@ import React from 'react';
 import propTypes from 'prop-types';
 
 import * as S from './styled';
+import getThemeColors from '../../utils/getThemeColors';
 
 const RecommendedPosts = ({ next, previous }) => (
   <S.RecommendedWrapper style={{ justifyContent: !next
@@ -14,6 +15,10 @@ const RecommendedPosts = ({ next, previous }) => (
       <S.RecommendedLink
         to={ previous.fields.slug }
         className="previous"
+        cover
+        direction="left"
+        bg={getThemeColors()}
+        duration={0.6}
       >
         { previous.frontmatter.title }
       </S.RecommendedLink>
@@ -22,6 +27,10 @@ const RecommendedPosts = ({ next, previous }) => (
       <S.RecommendedLink
         to={ next.fields.slug }
         className="next"
+        cover
+        direction="right"
+        bg={getThemeColors()}
+        duration={0.6}
       >
         { next.frontmatter.title }
       </S.RecommendedLink>

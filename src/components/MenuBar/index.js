@@ -9,6 +9,8 @@ import { ListUl as List } from '@styled-icons/boxicons-regular/ListUl';
 
 import * as S from './styled';
 
+import getThemeColors from '../../utils/getThemeColors';
+
 const MenuBar = () => {
   const [theme, setTheme] = useState(null);
   const [display, setDisplay] = useState(null);
@@ -26,12 +28,26 @@ const MenuBar = () => {
   return (
     <S.MenuBarWrapper>
       <S.MenuBarGroup>
-        <S.MenuBarLink to="/" title="Voltar para Home">
+        <S.MenuBarLink
+          to="/"
+          title="Voltar para Home"
+          cover
+          direction="right"
+          bg={getThemeColors()}
+          duration={0.6}
+        >
           <S.MenuBarItem>
             <Home />
           </S.MenuBarItem>
         </S.MenuBarLink>
-        <S.MenuBarLink to="/search/" title="Pesquisar">
+        <S.MenuBarLink
+          to="/search/"
+          title="Pesquisar"
+          cover
+          direction="right"
+          bg={getThemeColors()}
+          duration={0.6}
+        >
           <S.MenuBarItem>
             <Search />
           </S.MenuBarItem>
