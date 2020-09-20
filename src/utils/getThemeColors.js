@@ -1,5 +1,5 @@
 const getThemeColor = () => {
-  const theme = typeof window.__theme !== 'undefined' && window.__theme;
+  const theme = typeof window !== 'undefined' && window.__theme;
 
   if (theme === 'light') {
     return '#fff';

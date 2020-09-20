@@ -4,6 +4,7 @@ title: Testing Post 2
 description: Test description 2
 category: JS
 background: "#7CAB13"
+image: ""
 ---
 
 # Lorem

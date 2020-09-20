@@ -4,6 +4,7 @@ title: Testing Post
 description: Test description
 category: Misc
 background: "#7AAF13"
+image: "lake.jpg"
 ---
 
 # Lorem
