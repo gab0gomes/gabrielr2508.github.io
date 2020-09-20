@@ -3,7 +3,8 @@ import React, { useState, useEffect } from 'react';
 import { Home } from '@styled-icons/boxicons-solid/Home';
 import { SearchAlt2 as Search } from '@styled-icons/boxicons-solid/SearchAlt2';
 import { UpArrowAlt as Arrow } from '@styled-icons/boxicons-regular/UpArrowAlt';
-import { Bulb as Light } from '@styled-icons/boxicons-regular/Bulb';
+import { Bulb as LightOff } from '@styled-icons/boxicons-regular/Bulb';
+import { Bulb as LightOn } from '@styled-icons/boxicons-solid/Bulb';
 import { Grid } from '@styled-icons/boxicons-solid/Grid';
 import { ListUl as List } from '@styled-icons/boxicons-regular/ListUl';
 
@@ -61,7 +62,7 @@ const MenuBar = () => {
           }}
           className={theme}
         >
-          <Light />
+          { isDarkMode ? <LightOff /> : <LightOn /> }
         </S.MenuBarItem>
         <S.MenuBarItem
           title="Mudar visualização"
