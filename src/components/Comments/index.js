@@ -5,7 +5,7 @@ import propTypes from 'prop-types';
 import * as S from './styled';
 
 const Comments = ({ url, title }) => {
-  const completeURL = `https://gabrielr2508.github.com${url}`;
+  const completeURL = `https://gabrielr2508.github.io${url}`;
   return (
     <S.CommentsWrapper>
       <S.CommentsTitle>

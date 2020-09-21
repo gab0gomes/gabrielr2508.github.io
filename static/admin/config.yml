@@ -1,8 +1,8 @@
 backend:
   name: github
-  repo: Gabrielr2508/blog
+  repo: Gabrielr2508/gabrielr2508.github.io
   branch: master
-  site_domain: https://gabrielr2508@github.com
+  site_domain: https://gabrielr2508.github.io
 
 publish_mode: editorial_workflow
 media_folder: "static/assets/img"
