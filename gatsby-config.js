@@ -5,9 +5,9 @@ const queries = require('./src/utils/algolia-queries');
 module.exports = {
   siteMetadata: {
     title: `Gabriel Gomes`,
-    description: `A blog about my thoughts, front-end, agile and more cool stuffs.`,
+    description: `Um blog sobre meus pensamentos, front-end, agile, UX e outras coisas legais. :)`,
     author: `@gabrielr2508`,
-    position: `Front-end Developer`,
+    position: `Desenvolvedor Front-end`,
     siteUrl: `https://gabrielr2508.github.io`,
   },
   plugins: [
