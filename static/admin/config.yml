@@ -1,0 +1,57 @@
+backend:
+  name: github
+  repo: Gabrielr2508/blog
+  branch: master
+  site_domain: https://gabrielr2508@github.com
+
+publish_mode: editorial_workflow
+media_folder: "static/assets/img"
+public_folder: "assets/img"
+
+collections:
+  - name: "posts" # Used in routes, e.g., /admin/collections/blog
+    label: "Posts" # Used in the UI
+    folder: "posts" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}
+      - {label: "image", name: "thumbnail", widget: "image"}
+      - {label: "Category", name: "category", widget: "select", options: ["css", "js", "agile", "laravel", "misc", "comunnity", "ux"]}
+      - {label: "Background", name: "background", widget: "select", options: [
+          {
+            label: "CSS",
+            value: "#2DA0C3",
+          },
+          {
+            label: "JS",
+            value: "#D6BA32"
+          },
+          {
+            label: "HTML",
+            value: "#EB7728"
+          },
+          {
+            label: "agile",
+            value: "#7D669E",
+          },
+          {
+            label: "laravel",
+            value: "#637a91",
+          },
+          {
+            label: "misc",
+            value: "#7AAB13",
+          },
+          {
+            label: "comunnity",
+            value: "#7AAB13",
+          },
+          {
+            label:  "ux",
+            value: "#7AAB13",
+          },
+        ]}
+      - {label: "Body", name: "body", widget: "markdown"}

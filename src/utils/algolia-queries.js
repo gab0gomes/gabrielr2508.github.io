@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const postsQuerie = `{
   posts: allMarkdownRemark(
     sort: { fields: frontmatter___date, order: DESC }
@@ -34,9 +36,9 @@ const queries = [
   {
     query: postsQuerie,
     transformer: ({ data }) => flatten(data.posts.edges),
-    indexName: 'Posts',
+    indexName: process.env.GATSBY_ALGOLIA_INDEX_NAME,
     settings: {
-      attributesToSnippet: ['excertp:20'],
+      attributesToSnippet: ['excerpt:20'],
     },
   },
 ];
