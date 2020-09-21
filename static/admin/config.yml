@@ -3,6 +3,7 @@ backend:
   repo: Gabrielr2508/gabrielr2508.github.io
   branch: master
   site_domain: gabrielr2508.github.io
+  base_url: https://blog-oauth.herokuapp.com
 
 publish_mode: editorial_workflow
 media_folder: "static/assets/img"
