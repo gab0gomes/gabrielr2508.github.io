@@ -3,7 +3,7 @@ title: Notificações no Laravel 5.6 (Parte 1)
 description: Primeira parte de uma serie de dois postes sobre como implementar a
   feature de notificaçõs do laravel
 date: 2020-09-21 08:23:43
-thumbnail: assets/img/1_zxcy8-4blrjsxuht_034iw.png
+image: assets/img/1_zxcy8-4blrjsxuht_034iw.png
 category: laravel
 background: "#637a91"
 ---
