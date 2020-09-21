@@ -19,8 +19,8 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Description", name: "description", widget: "string"}
       - {label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}
-      - {label: "image", name: "thumbnail", widget: "image"}
-      - {label: "Category", name: "category", widget: "select", options: ["css", "js", "agile", "laravel", "misc", "comunnity", "ux"]}
+      - {label: "image", name: "image", widget: "image"}
+      - {label: "Category", name: "category", widget: "select", options: ["css", "js", "html", "agile", "laravel", "misc", "community", "ux"]}
       - {label: "Background", name: "background", widget: "select", options: [
           {
             label: "CSS",
@@ -35,23 +35,23 @@ collections:
             value: "#EB7728"
           },
           {
-            label: "agile",
+            label: "AGILE",
             value: "#7D669E",
           },
           {
-            label: "laravel",
+            label: "LARAVEL",
             value: "#637a91",
           },
           {
-            label: "misc",
+            label: "MISC",
             value: "#7AAB13",
           },
           {
-            label: "comunnity",
+            label: "COMMUNITY",
             value: "#7AAB13",
           },
           {
-            label:  "ux",
+            label:  "UX",
             value: "#7AAB13",
           },
         ]}
