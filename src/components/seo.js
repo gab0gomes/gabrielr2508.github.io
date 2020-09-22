@@ -53,6 +53,7 @@ function SEO({ description, lang, meta, title, image }) {
         },
         {
           property: `og:image`,
+          itemprop: `image`,
           content: ogImage,
         },
         {
