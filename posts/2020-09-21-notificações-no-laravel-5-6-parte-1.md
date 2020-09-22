@@ -4,9 +4,12 @@ description: Primeira parte de uma serie de dois posts sobre como implementar a
   feature de notificações do Laravel 5.6
 date: 2020-09-21 08:23:43
 image: assets/img/1_zxcy8-4blrjsxuht_034iw.png
+thumbnail: assets/img/1_zxcy8-4blrjsxuht_034iw.png
 category: laravel
 background: "#637a91"
 ---
+![Logos do laravel e do pusher](assets/img/1_zxcy8-4blrjsxuht_034iw.png)
+
 *O framework* PHP Laravel 5.6 é muito robusto e poderoso. Consequentemente dispõe de diversas *features* que podem ser adotadas durante o desenvolvimento de aplicações. Uma dessas *features* é a [Notificação](https://laravel.com/docs/5.6/notifications#introduction).
 
 > As notificações possuem o propósito de, oportunamente, enviar mensagens para uma pessoa ou um grupo de pessoas. Sua utilização básica se resume a alertar que um evento ocorreu no sistema.
