@@ -11,9 +11,6 @@ module.exports = {
     siteUrl: `https://gabrielr2508.github.io`,
   },
   plugins: [
-    `gatsby-plugin-transition-link`,
-    `gatsby-plugin-styled-components`,
-    `gatsby-plugin-react-helmet`,
     // needs to be the first because of gatsby-remark-images
     {
       resolve: `gatsby-source-filesystem`,
@@ -36,30 +33,34 @@ module.exports = {
         path: `${__dirname}/posts`,
       },
     },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
         resolve: `gatsby-transformer-remark`,
         options: {
             plugins: [
               {
-                resolve: 'gatsby-remark-relative-images',
+                resolve: `gatsby-remark-relative-images`,
                 options: {
-                  name: 'uploads',
+                  name: `uploads`,
                 },
               },
               {
-                resolve: 'gatsby-remark-images',
+                resolve: `gatsby-remark-images`,
                 options: {
                   maxWidth: 960,
                   linkImagesToOriginal: false,
                 },
               },
-              'gatsby-remark-lazy-load',
-              'gatsby-remark-prismjs',
+              `gatsby-remark-lazy-load`,
+              `gatsby-remark-prismjs`,
             ],
         },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    `gatsby-plugin-netlify-cms`,
+    `gatsby-plugin-transition-link`,
+    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-algolia-search`,
       options: {
@@ -87,7 +88,6 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     `gatsby-plugin-offline`,
-    `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-smoothscroll`,
   ],
 }
