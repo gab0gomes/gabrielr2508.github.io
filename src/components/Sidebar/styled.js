@@ -6,7 +6,6 @@ export const SidebarContent = styled.aside`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border-right: 1px solid var(--borders);
   background: var(--background);
   height: 100vh;
   padding: 5rem 2rem 3rem 2rem;
