@@ -18,7 +18,9 @@ export const SocialLinksList = styled.ul`
 `;
 
 export const SocialLinksItem = styled.li`
-  margin-bottom: 1rem;
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
 `;
 
 export const SocialLinksLink = styled.a`
