@@ -80,8 +80,10 @@ export const MenuBarItem = styled.span`
     background-color: var(--guava-pink);
     color: var(--white);
     padding: .5rem 1rem;
+    transition: background-color 0.5s;
 
     &:hover {
+      color: var(--white);
       background-color: var(--dark);
     }
   }
