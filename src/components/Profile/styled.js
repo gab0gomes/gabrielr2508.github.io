@@ -24,33 +24,35 @@ export const ProfileLink = styled(AniLink)`
 `;
 
 export const ProfileAuthor = styled.h1`
-  font-size: 1.6rem;
-  margin: 0.5rem auto 1.5rem;
+  font-size: 1.5rem;
+  margin: 1rem 0 0;
+  font-weight: 700;
 
-  ${media.lessThan('large')`
+  /* ${media.lessThan('large')`
     font-size: 1.2rem;
     margin: 0 0 0 10px;
-  `};
+  `}; */
 `;
 
 export const ProfilePosition = styled.small`
-  font-size: 1.3rem;
+  font-size: 1rem;
   display: block;
-  font-weight: 300;
-
+  font-weight: 400;
+  margin: .5rem 0 1rem;
+/*
   ${media.lessThan('large')`
     font-size: 0.8rem;
     margin-top: 0.2rem;
-  `};
+  `}; */
 `;
 
 export const ProfileDescription = styled.p`
   font-size: 1rem;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.4;
 
-  ${media.lessThan('large')`
+  /* ${media.lessThan('large')`
     display: none;
-  `};
+  `}; */
 `;
 

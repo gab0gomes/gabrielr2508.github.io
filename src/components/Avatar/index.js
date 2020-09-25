@@ -24,7 +24,11 @@ const Avatar = () => {
     `
   );
 
-  return <S.AvatarWrapper fluid={ avatarImage.childImageSharp.fluid } />;
+  return (
+    <S.AvatarFilter>
+      <S.AvatarImage fluid={ avatarImage.childImageSharp.fluid } />
+    </S.AvatarFilter>
+  );
 };
 
 export default Avatar;

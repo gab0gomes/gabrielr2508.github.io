@@ -2,14 +2,14 @@ import styled from 'styled-components';
 import media from 'styled-media-query';
 
 export const SidebarContent = styled.aside`
-  align-items: center;
-  border-right: 1px solid var(--borders);
-  background: var(--mediumBackground);
+  align-items: flex-start;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  border-right: 1px solid var(--borders);
+  background: var(--mediumBackground);
   height: 100vh;
-  padding: 2rem;
-  text-align: center;
+  padding: 5rem 2rem 3rem 2rem;
   width: 20rem;
   position: fixed;
   left: -20rem;

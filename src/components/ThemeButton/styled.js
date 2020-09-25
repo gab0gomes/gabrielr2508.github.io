@@ -24,4 +24,5 @@ export const ThemeButtonIconWrapper = styled.div`
 
 export const ThemeButtonLabel = styled.label`
   font-size: 1rem;
+  color: green;
 `;

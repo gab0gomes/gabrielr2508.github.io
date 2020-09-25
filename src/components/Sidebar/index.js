@@ -31,7 +31,6 @@ class Sidebar extends React.Component {
       <S.SidebarWrapper className={(this.state.isOpen ? 'slide' : '')}>
         <S.SidebarContent>
           <Profile />
-          <SocialLinks />
           <MenuLinks />
           <ThemeButton />
         </S.SidebarContent>
