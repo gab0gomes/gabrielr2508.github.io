@@ -18,6 +18,7 @@ export const ThemeButtonButton = styled.button`
   color: var(--white);
   transition: .5s;
   padding: .25rem .25rem .25rem .5rem;
+  cursor: pointer;
 
   &:hover {
     background-color: var(--guava-pink);

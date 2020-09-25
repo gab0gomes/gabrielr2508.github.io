@@ -73,16 +73,18 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body.light {
-    --border: var(--light-blue);
+    --borders: var(--light-blue);
     --texts:  var(--dark);
     --background: var(--white);
     --highlight: var(--guava-pink);
+    --postColor:  var(--dark);
   }
   body.dark {
-    --border: var(--light-blue);
+    --borders: var(--light-blue);
     --texts:  var(--white);
     --background: var(--dark-plus);
     --highlight: var(--guava-pink);
+    --postColor:  var(--white);
   }
 `;
 

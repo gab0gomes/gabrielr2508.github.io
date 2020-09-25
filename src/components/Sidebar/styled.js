@@ -38,7 +38,7 @@ export const SidebarOverlay = styled.aside`
   pointer-events: none;
 
   .slide & {
-    opacity: 0.2;
+    opacity: 0.4;
     margin-left: 20rem !important;
     pointer-events: auto;
   }

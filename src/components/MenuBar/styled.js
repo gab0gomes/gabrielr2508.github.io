@@ -5,7 +5,7 @@ import media from 'styled-media-query';
 export const MenuBarWrapper = styled.aside`
   align-items: center;
   background: var(--background);
-  border-right: 1px solid var(--border);
+  border-right: 1px solid var(--borders);
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -82,7 +82,7 @@ export const MenuBarItem = styled.span`
     padding: .5rem 1rem;
 
     &:hover {
-      background-color: var(--dark-plus);
+      background-color: var(--dark);
     }
   }
 
