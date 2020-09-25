@@ -9,29 +9,29 @@ import MenuBar from '../MenuBar';
 
 import * as S from './styled';
 
-const Layout = ({ children }) => {
-  const [cssClass, setCssClass] = useState('');
-  const toggleSlide = () => {
-    if (cssClass) {
-      setCssClass('');
-    } else {
-      setCssClass('slide');
-    }
+class Layout extends React.Component {
+  constructor(props) {
+    super(props);
   }
-  return (
-    <S.LayoutWrapper>
-      <GlobalStyles />
-      <TransitionPortal level="top">
-        <Sidebar
-         animation={cssClass}
-        />
-        <MenuBar
-          onMenuClick={toggleSlide}
-        />
-      </TransitionPortal>
-      <S.LayoutMain>{children}</S.LayoutMain>
-    </S.LayoutWrapper>
-  );
+
+  render() {
+    return (
+      <S.LayoutWrapper>
+        <GlobalStyles />
+        <TransitionPortal level="top">
+          <Sidebar
+            ref="sidebar"
+          />
+          <MenuBar
+            onMenuClick={() => {
+              this.refs.sidebar.toggle();
+            }}
+          />
+        </TransitionPortal>
+        <S.LayoutMain>{this.props.children}</S.LayoutMain>
+      </S.LayoutWrapper>
+    );
+  }
 }
 
 Layout.propTypes = {

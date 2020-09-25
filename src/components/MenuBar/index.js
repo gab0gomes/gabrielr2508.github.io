@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import scrollTo from 'gatsby-plugin-smoothscroll';
 import { useStaticQuery, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
