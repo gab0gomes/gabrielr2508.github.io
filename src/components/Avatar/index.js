@@ -14,7 +14,7 @@ const Avatar = () => {
         ) {
           childImageSharp {
             fluid(
-              maxWidth: 60,
+              maxWidth: 128,
             ) {
               ...GatsbyImageSharpFluid,
             }
@@ -23,11 +23,8 @@ const Avatar = () => {
       }
     `
   );
-
   return (
-    <S.AvatarFilter>
-      <S.AvatarImage fluid={ avatarImage.childImageSharp.fluid } />
-    </S.AvatarFilter>
+    <S.AvatarImage fluid={ avatarImage.childImageSharp.fluid } />
   );
 };
 

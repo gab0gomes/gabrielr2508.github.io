@@ -7,13 +7,13 @@ export const SidebarContent = styled.aside`
   flex-direction: column;
   justify-content: space-between;
   border-right: 1px solid var(--borders);
-  background: var(--mediumBackground);
+  background: var(--background);
   height: 100vh;
   padding: 5rem 2rem 3rem 2rem;
   width: 20rem;
   position: fixed;
   left: -20rem;
-  transition: margin .5s;
+  transition: background 0.5s, margin .5s;
 
 
   /* ${media.lessThan('large')`

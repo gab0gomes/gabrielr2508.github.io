@@ -13,7 +13,15 @@ export const ThemeButtonButton = styled.button`
   align-items: center;
   font-size: 1rem;
   height: 2rem;
-  background-color: green;
+  background-color: var(--dark);
+  border: 0;
+  color: var(--white);
+  transition: .5s;
+  padding: .25rem .25rem .25rem .5rem;
+
+  &:hover {
+    background-color: var(--guava-pink);
+  }
 `;
 
 export const ThemeButtonIconWrapper = styled.div`
@@ -24,5 +32,5 @@ export const ThemeButtonIconWrapper = styled.div`
 
 export const ThemeButtonLabel = styled.label`
   font-size: 1rem;
-  color: green;
+  color: var(--texts);
 `;

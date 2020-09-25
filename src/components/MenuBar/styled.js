@@ -4,8 +4,8 @@ import media from 'styled-media-query';
 
 export const MenuBarWrapper = styled.aside`
   align-items: center;
-  background: var(--white);
-  border-right: 3px solid green;
+  background: var(--background);
+  border-right: 1px solid var(--border);
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -15,14 +15,14 @@ export const MenuBarWrapper = styled.aside`
   width: var(--menuBarWidth);
   transition: background 0.5s;
 
-  ${media.lessThan('large')`
+  /* ${media.lessThan('large')`
     border-top: 1px solid var(--borders);
     bottom: 0;
     flex-direction: row;
     height: auto;
     padding: 0;
     width: 100%;
-  `};
+  `}; */
 `;
 
 export const MenuBarGroup = styled.div`
@@ -77,8 +77,13 @@ export const MenuBarItem = styled.span`
   }
 
   &.menu {
-    background-color: var(--highlight);
+    background-color: var(--guava-pink);
+    color: var(--white);
     padding: .5rem 1rem;
+
+    &:hover {
+      background-color: var(--dark-plus);
+    }
   }
 
   &.display {
