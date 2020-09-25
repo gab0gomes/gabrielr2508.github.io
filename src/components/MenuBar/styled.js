@@ -4,16 +4,15 @@ import media from 'styled-media-query';
 
 export const MenuBarWrapper = styled.aside`
   align-items: center;
-  background: var(--mediumBackground);
-  border-left: 1px solid var(--borders);
+  background: var(--white);
+  border-right: 3px solid green;
   display: flex;
   flex-direction: column;
   height: 100vh;
   justify-content: space-between;
-  padding: 0.8rem 0;
   position: fixed;
-  right: 0;
-  width: 3.75rem;
+  left: 0;
+  width: var(--menuBarWidth);
   transition: background 0.5s;
 
   ${media.lessThan('large')`
@@ -37,6 +36,7 @@ export const MenuBarGroup = styled.div`
 
 export const MenuBarLink = styled(AniLink)`
   display: block;
+  text-decoration: none;
 
   &.active {
     span {
@@ -49,10 +49,9 @@ export const MenuBarItem = styled.span`
   color: var(--texts);
   cursor: pointer;
   display: block;
-  height: 3.75rem;
-  padding: 1.1rem;
+  padding: 1rem;
   position: relative;
-  width: 3.75rem;
+  width: var(--menuBarWidth);
   transition: color 0.5s;
 
   &.light {
@@ -65,6 +64,21 @@ export const MenuBarItem = styled.span`
 
   &:hover {
     color: var(--highlight);
+  }
+
+  &.vertical {
+    writing-mode: vertical-rl;
+    transform: scale(-1);
+    height: auto;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 3rem 1rem;
+    font-size: 1.5rem;
+  }
+
+  &.menu {
+    background-color: var(--highlight);
+    padding: .5rem 1rem;
   }
 
   &.display {

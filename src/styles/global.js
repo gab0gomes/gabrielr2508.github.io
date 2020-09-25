@@ -62,6 +62,11 @@ const GlobalStyles = createGlobalStyle`
     width: 100%;
     height: auto;
   }
+
+  body {
+    --menuBarWidth: 4rem;
+  }
+
   body.light {
     --borders: #dedede;
     --postColor: #111;
