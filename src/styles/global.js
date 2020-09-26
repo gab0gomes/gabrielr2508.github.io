@@ -87,6 +87,24 @@ const GlobalStyles = createGlobalStyle`
     --highlight: var(--guava-pink);
     --postColor:  var(--white);
   }
+
+  .Toastify__toast {
+    min-height: 3rem;
+    box-shadow: 4px 4px 0px 0px rgba(0,0,0,0.2);
+    background-color: var(--light-blue);
+  }
+  .Toastify__toast-container {
+    top: 4rem;
+  }
+  .Toastify__toast--default {
+    color: var(--texts);
+  }
+  .Toastify__toast-body {
+    /* margin: 0; */
+  }
+  .Toastify__close-button {
+    display: none;
+  }
 `;
 
 export default GlobalStyles;
