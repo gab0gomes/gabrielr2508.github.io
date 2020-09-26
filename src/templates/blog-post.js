@@ -28,7 +28,7 @@ const BlogPost = ({ data, pageContext }) => {
           <S.PostDate>
             { post.frontmatter.date } • { post.timeToRead } min de leitura
           </S.PostDate>
-          <ShareButton />
+          <ShareButton value={`${data.site.siteMetadata.siteUrl}${post.fields.slug}`} />
         </S.PostBar>
         <S.PostHeader>
           <S.PostTitle>
@@ -55,7 +55,7 @@ const BlogPost = ({ data, pageContext }) => {
 };
 
 export const query = graphql`
-  query Post($slug: String!) {
+  query ($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       fields {
         slug
@@ -74,6 +74,11 @@ export const query = graphql`
       }
       html
       timeToRead
+    }
+    site {
+      siteMetadata {
+        siteUrl
+      }
     }
   }
 `;

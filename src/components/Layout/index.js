@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { TransitionPortal } from 'gatsby-plugin-transition-link';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.min.css';
 
 import GlobalStyles from '../../styles/global';
 
@@ -18,6 +20,17 @@ class Layout extends React.Component {
     return (
       <S.LayoutWrapper>
         <GlobalStyles />
+        <ToastContainer
+          position="top-right"
+          autoClose={2000}
+          hideProgressBar
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+        />
         <TransitionPortal level="top">
           <Sidebar
             ref="sidebar"
