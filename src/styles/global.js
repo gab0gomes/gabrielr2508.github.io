@@ -70,6 +70,7 @@ const GlobalStyles = createGlobalStyle`
     --light-blue: #DBEDF3;
     --guava-pink: #DA0463;
     --white: #FFFFFF;
+    --gray: #F6F8FB;
   }
 
   body.light {

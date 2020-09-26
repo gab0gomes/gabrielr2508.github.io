@@ -24,15 +24,15 @@ const Search = () => (
     >
       <SearchBox
         autoFocus
-        translations={{ placeholder: 'Pesquisar...' }}
+        translations={{ placeholder: 'Pesquisar um post...' }}
       />
-      <Stats
+      {/* <Stats
         translations={{
           stats(nbHits, timeSpentMs) {
             return `${nbHits} resultados encontrados em ${timeSpentMs}ms`;
           },
         }}
-      />
+      /> */}
       <Hits hitComponent={Hit} />
     </InstantSearch>
   </S.SearchWrapper>
