@@ -30,7 +30,6 @@ const BlogList = (props) => {
                 slug,
               },
               frontmatter: {
-                background,
                 category,
                 date,
                 description,
@@ -42,7 +41,6 @@ const BlogList = (props) => {
             <PostItem
               key={slug}
               slug={ slug }
-              background={ background }
               category={ category }
               date={ date }
               timeToRead={ timeToRead }
@@ -78,7 +76,6 @@ export const query = graphql`
             slug
           }
           frontmatter {
-            background
             category
             date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
             description

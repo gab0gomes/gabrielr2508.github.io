@@ -9,6 +9,7 @@ const Hit = ({ hit }) => (
     description={hit.description}
     category={hit.category}
     background={hit.background}
+    active={hit.fields.slug === decodeURI(window.location.pathname)}
   />
 );
 

@@ -6,6 +6,7 @@ import SEO from '../components/seo';
 import RecommendedPosts from '../components/RecommendedPosts';
 import Comments from '../components/Comments';
 import Search from '../components/Search';
+import ShareButton from '../components/ShareButton';
 
 import * as S from '../components/Post/styled';
 
@@ -27,6 +28,7 @@ const BlogPost = ({ data, pageContext }) => {
           <S.PostDate>
             { post.frontmatter.date } • { post.timeToRead } min de leitura
           </S.PostDate>
+          <ShareButton />
         </S.PostBar>
         <S.PostHeader>
           <S.PostTitle>

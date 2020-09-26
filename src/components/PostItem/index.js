@@ -12,6 +12,7 @@ const PostItem = ({
   timeToRead,
   title,
   description,
+  active,
 }) => (
   <S.PostItemLink
     cover
@@ -20,7 +21,7 @@ const PostItem = ({
     duration={0.6}
     to={slug}
   >
-    <S.PostItemWrapper>
+    <S.PostItemWrapper active={!!active}>
       <S.PostItemInfo>
         <S.PostItemHeader>
           <S.PostItemDate>{date}{timeToRead ? ` • ${timeToRead} min de leitura` : ''}</S.PostItemDate>
@@ -45,6 +46,7 @@ PostItem.propTypes = {
   timeToRead: PropTypes.number,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
+  active: PropTypes.bool,
 }
 
 export default PostItem;

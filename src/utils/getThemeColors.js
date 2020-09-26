@@ -5,7 +5,7 @@ const getThemeColor = () => {
     return '#fff';
   }
   if (theme === 'dark') {
-    return '#16202c';
+    return '#283149';
   }
 };
 

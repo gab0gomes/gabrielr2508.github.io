@@ -43,7 +43,7 @@ export const PostTitle = styled.h1`
 
 export const PostDescription = styled.h2`
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: 300;
   /* ${media.lessThan('large')`
     font-size: 1.6rem;
     line-height: 1.3;
@@ -84,7 +84,7 @@ export const MainContent = styled.section`
   .button-post {
     color: var(--postColor);
     font-size: 1.25rem;
-    font-weight: 400;
+    font-weight: 300;
     line-height: 1.7;
     letter-spacing: 0.069rem;
     padding: 0;

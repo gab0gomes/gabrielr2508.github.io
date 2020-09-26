@@ -3,25 +3,24 @@ import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import media from 'styled-media-query';
 
 export const PostItemLink = styled(AniLink)`
-  color: var(--texts);
   display: flex;
   text-decoration: none;
-
-  &:hover {
-    color: var(--highlight);
-  }
 `;
 
 export const PostItemWrapper = styled.section`
+  color: var(--texts);
   align-items: center;
   border-bottom: 1px solid var(--borders);
   display: flex;
   padding: 1rem 2rem;
   width: 100%;
   transition: 0.5s;
+  background-color: ${props => props.active ? 'var(--gray)' : ''};
+  color: ${props => props.active ? 'var(--dark-plus)' : ''};
 
   &:hover {
     background-color: var(--gray);
+    color: var(--highlight);
   }
   /* ${media.lessThan('large')`
     align-items: flex-start;
