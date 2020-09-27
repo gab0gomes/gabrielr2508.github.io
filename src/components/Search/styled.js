@@ -50,4 +50,43 @@ export const SearchWrapper = styled.section`
   .ais-SearchBox-reset {
     display: none;
   }
+
+  .ais-Pagination {
+    background-color: var(--background);
+  }
+  .ais-Pagination-list {
+    display: flex;
+    align-items: center;
+    height: 3rem;
+  }
+  .ais-Pagination-item {
+    font-size: 1rem;
+    height: 3rem;
+    color: var(--texts);
+
+    &.ais-Pagination-item--disabled {
+      opacity: 0.3;
+    }
+
+    &:not(.ais-Pagination-item--disabled) {
+      .ais-Pagination-link:hover {
+        color: var(--highlight);
+        background-color: var(--gray);
+        cursor: pointer;
+      }
+    }
+  }
+
+  .ais-Pagination-link {
+    padding: 1rem;
+    display: block;
+    color: var(--texts);
+    text-decoration: none;
+    transition: 0.5s;
+  }
+
+  .ais-Pagination-link--selected {
+    color: var(--highlight);
+    text-decoration: none;
+  }
 `;
