@@ -1,12 +1,9 @@
 import React from 'react';
-import scrollTo from 'gatsby-plugin-smoothscroll';
 import { useStaticQuery, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 
 import { SearchAlt2 as Search } from '@styled-icons/boxicons-solid/SearchAlt2';
-import { UpArrowAlt as Arrow } from '@styled-icons/boxicons-regular/UpArrowAlt';
 
-import { Grid } from '@styled-icons/boxicons-solid/Grid';
 import { MenuAltLeft as Menu } from '@styled-icons/boxicons-regular/MenuAltLeft';
 
 import * as S from './styled';

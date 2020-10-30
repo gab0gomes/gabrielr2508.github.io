@@ -7,6 +7,7 @@ import RecommendedPosts from '../components/RecommendedPosts';
 import Comments from '../components/Comments';
 import Search from '../components/Search';
 import ShareButton from '../components/ShareButton';
+import Footer from '../components/Footer';
 
 import * as S from '../components/Post/styled';
 
@@ -49,6 +50,7 @@ const BlogPost = ({ data, pageContext }) => {
           url={ post.fields.slug }
           title={ post.frontmatter.title }
         />
+        <Footer />
       </S.PostWrapper>
     </Layout>
   );

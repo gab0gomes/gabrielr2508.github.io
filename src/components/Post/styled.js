@@ -2,9 +2,9 @@ import styled from 'styled-components';
 import media from 'styled-media-query';
 
 export const PostWrapper = styled.section`
-  width: calc(100vw - 30rem - var(--menuBarWidth));
-  overflow-y: scroll;
+  width: var(--postWidth);
   height: 100vh;
+  overflow-y: scroll;
   border-left: 1px solid var(--light-blue);
 `;
 

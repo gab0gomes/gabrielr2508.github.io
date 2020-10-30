@@ -71,6 +71,7 @@ const GlobalStyles = createGlobalStyle`
     --guava-pink: #DA0463;
     --white: #FFFFFF;
     --gray: #F6F8FB;
+    --postWidth: calc(100vw - 30rem - var(--menuBarWidth));
   }
 
   body.light {
