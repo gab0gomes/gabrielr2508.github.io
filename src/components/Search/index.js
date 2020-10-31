@@ -1,6 +1,6 @@
 import React from 'react';
 import algoliasearch from 'algoliasearch/lite';
-import { InstantSearch, SearchBox, Hits, Stats } from 'react-instantsearch-dom';
+import { InstantSearch, SearchBox, Hits, Pagination, Configure } from 'react-instantsearch-dom';
 
 import * as S from './styled';
 import Hit from './Hit';
@@ -22,18 +22,21 @@ const Search = () => (
       searchClient={searchClient}
       indexName={algolia.indexName}
     >
-      <SearchBox
-        autoFocus
-        translations={{ placeholder: 'Pesquisar...' }}
+      <Configure
+        hitsPerPage={8}
       />
-      <Stats
+      <SearchBox
+        translations={{ placeholder: 'Pesquisar um post...' }}
+      />
+      {/* <Stats
         translations={{
           stats(nbHits, timeSpentMs) {
             return `${nbHits} resultados encontrados em ${timeSpentMs}ms`;
           },
         }}
-      />
+      /> */}
       <Hits hitComponent={Hit} />
+      <Pagination />
     </InstantSearch>
   </S.SearchWrapper>
 );

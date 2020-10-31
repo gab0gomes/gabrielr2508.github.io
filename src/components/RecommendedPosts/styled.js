@@ -25,7 +25,7 @@ export const RecommendedLink = styled(AniLink)`
   transition: background 0.5s;
   width: 50%;
   &:hover {
-    background: var(--borders);
+    background: var(--gray);
   }
   &.previous {
     border-right: 1px solid var(--borders);

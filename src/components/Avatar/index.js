@@ -14,7 +14,7 @@ const Avatar = () => {
         ) {
           childImageSharp {
             fluid(
-              maxWidth: 60,
+              maxWidth: 128,
             ) {
               ...GatsbyImageSharpFluid,
             }
@@ -23,8 +23,9 @@ const Avatar = () => {
       }
     `
   );
-
-  return <S.AvatarWrapper fluid={ avatarImage.childImageSharp.fluid } />;
+  return (
+    <S.AvatarImage fluid={ avatarImage.childImageSharp.fluid } />
+  );
 };
 
 export default Avatar;

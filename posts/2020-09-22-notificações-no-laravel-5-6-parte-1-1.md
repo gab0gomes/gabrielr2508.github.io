@@ -5,7 +5,6 @@ description: Primeira parte de uma serie de dois posts sobre como implementar a
 date: 2020-09-21 23:51:23
 image: /assets/img/laravel-pusher.png
 category: laravel
-background: "#637a91"
 ---
 ![Logos do laravel e do pusher](/assets/img/laravel-pusher.png)
 
