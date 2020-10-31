@@ -8,10 +8,6 @@ const links = [
     url: 'https://twitter.com/gabrielr2508',
   },
   {
-    label: 'Medium',
-    url: 'https://medium.com/@gabrielrafael2508',
-  },
-  {
     label: 'Linkedin',
     url: 'https://www.linkedin.com/in/gabrielrgomes/',
   },
