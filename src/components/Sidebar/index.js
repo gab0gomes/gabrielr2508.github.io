@@ -40,7 +40,7 @@ class Sidebar extends React.Component {
             }}
           />
           <MediaQuery maxWidth={1170}>
-            <SocialLinks />
+            <SocialLinks isHorizontal={true} />
           </MediaQuery>
           <ThemeButton />
         </S.SidebarContent>

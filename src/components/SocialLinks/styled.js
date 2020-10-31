@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import media from 'styled-media-query';
 
 export const SocialLinksWrapper = styled.nav`
   margin: 3rem auto;
@@ -12,11 +11,11 @@ export const SocialLinksList = styled.ul`
   flex-direction: column;
   list-style: none;
 
-  ${media.lessThan('large')`
+  .horizontal & {
     flex-direction: row;
     justify-content: space-between;
     width: 10rem;
-  `};
+  }
 `;
 
 export const SocialLinksItem = styled.li`
@@ -24,11 +23,11 @@ export const SocialLinksItem = styled.li`
     margin-bottom: 1rem;
   }
   
-  ${media.lessThan('large')`
+  .horizontal & {
     &:not(:last-child) {
       margin-bottom: 0;
     }
-  `};
+  }
 `;
 
 export const SocialLinksLink = styled.a`
