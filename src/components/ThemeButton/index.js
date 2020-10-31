@@ -21,6 +21,18 @@ const ThemeButton = () => {
         title="Mudar o tema"
         onClick={() => {
           window.__setPreferredTheme(isDarkMode ? 'light' : 'dark');
+
+          if (window.DISQUS) {
+            const pageUrl = document.location.href;
+  
+            window.DISQUS.reset({
+              reload: true,
+              config: function () {
+                this.page.identifier = pageUrl;
+                this.page.url = pageUrl;
+              }
+            });
+          }
         }}
         className={theme}
       >
