@@ -92,7 +92,8 @@ const GlobalStyles = createGlobalStyle`
   .Toastify__toast {
     min-height: 3rem;
     box-shadow: 4px 4px 0px 0px rgba(0,0,0,0.2);
-    background-color: var(--light-blue);
+    background-color: var(--background);
+    border: 1px solid var(--light-blue);
   }
   .Toastify__toast-container {
     top: 4rem;
