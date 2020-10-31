@@ -15,7 +15,7 @@ export const AboutPage = styled.section`
 `;
 
 export const AboutImage = styled(Img)`
-  min-width: 20rem;
+  min-width: 12rem;
   width: 50%;
   margin-top: 3rem;
 `;

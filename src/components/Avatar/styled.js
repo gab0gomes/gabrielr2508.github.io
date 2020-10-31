@@ -5,8 +5,7 @@ import Img from 'gatsby-image';
 export const AvatarImage = styled(Img)`
   width: 8rem;
 
-  /* ${media.lessThan('large')`
-    height: 1.875rem;
-    width: 1.875rem;
-  `}; */
+  ${media.lessThan('small')`
+    width: 4rem;
+  `};
 `;

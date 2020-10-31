@@ -9,6 +9,7 @@ export const PostWrapper = styled.section`
 
   ${media.lessThan('large')`
     width: 100%;
+    border-left: none;
   `}
 `;
 

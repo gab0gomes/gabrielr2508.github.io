@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import media from 'styled-media-query';
 
 export const FooterWrapper = styled.footer`
+  z-index: 10;
   display: flex;
   position: fixed;
   bottom: 0;
