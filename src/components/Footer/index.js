@@ -11,7 +11,9 @@ const Footer = () => (
     </S.FooterAuthor>
     <S.FooterScrollTopButton
       title="Ir para o topo"
-      onClick={() => scrollTo('body')}
+      onClick={() => {
+        scrollTo('#post-bar')}
+      }
     >
       <Arrow />
     </S.FooterScrollTopButton>

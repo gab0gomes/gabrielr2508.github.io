@@ -25,7 +25,7 @@ const BlogPost = ({ data, pageContext }) => {
       />
       <Search />
       <S.PostWrapper>
-        <S.PostBar>
+        <S.PostBar id="post-bar">
           <S.PostDate>
             { post.frontmatter.date } • { post.timeToRead } min de leitura
           </S.PostDate>
