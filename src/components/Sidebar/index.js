@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import MediaQuery from 'react-responsive';
 
 import Profile from '../Profile';
 import SocialLinks from '../SocialLinks';
@@ -25,6 +26,8 @@ class Sidebar extends React.Component {
   toggle() {
     this.setState((state) => ({ isOpen: !state.isOpen }));
   }
+  
+ 
 
   render() {
     return (
@@ -36,6 +39,9 @@ class Sidebar extends React.Component {
               this.setState({ isOpen: false });
             }}
           />
+          <MediaQuery maxWidth={1170}>
+            <SocialLinks />
+          </MediaQuery>
           <ThemeButton />
         </S.SidebarContent>
         <S.SidebarOverlay

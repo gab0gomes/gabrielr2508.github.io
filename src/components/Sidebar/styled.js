@@ -14,13 +14,17 @@ export const SidebarContent = styled.aside`
   left: -20rem;
   transition: background 0.5s, margin .5s;
 
-
-  ${media.lessThan('large')`
-    left: -22rem;
-  `};
   .slide & {
     margin-left: calc(20rem + var(--menuBarWidth)) !important;
   }
+
+  ${media.lessThan('large')`
+    left: -22rem;
+
+    .slide & {
+      margin-left: 22rem !important;
+    }
+  `};
 `;
 
 export const SidebarOverlay = styled.aside`
@@ -38,6 +42,12 @@ export const SidebarOverlay = styled.aside`
     margin-left: 20rem !important;
     pointer-events: auto;
   }
+
+  ${media.lessThan('large')`
+    .slide & {
+      margin-left: 16rem !important;
+    }
+  `};
 `;
 
 export const SidebarWrapper = styled.section`

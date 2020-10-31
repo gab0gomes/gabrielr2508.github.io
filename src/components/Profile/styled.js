@@ -13,10 +13,6 @@ export const ProfileLink = styled(AniLink)`
   text-decoration: none;
   transition: color 0.5s;
 
-  ${media.lessThan('large')`
-    display: flex;
-    text-align: left;
-  `};
 
   &:hover {
     color: var(--highlight);

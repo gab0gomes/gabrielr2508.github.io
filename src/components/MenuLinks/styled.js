@@ -1,11 +1,7 @@
 import styled from 'styled-components';
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
-import media from 'styled-media-query';
 
 export const MenuLinksWrapper = styled.nav`
-  ${media.lessThan('large')`
-    display: none;
-  `};
 `;
 
 export const MenuLinksList = styled.ul`

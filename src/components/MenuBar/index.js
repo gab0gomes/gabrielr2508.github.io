@@ -59,7 +59,10 @@ const MenuBar = ({ onMenuClick }) => {
         </S.MenuBarLink>
       </S.MenuBarGroup>
       <S.MenuBarGroup>
-          <SocialLinks />
+        {
+          isDesktopOrLaptop
+          && <SocialLinks />
+        }
       </S.MenuBarGroup>
       {
         document.location.pathname !== '/search'
