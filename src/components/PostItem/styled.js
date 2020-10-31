@@ -82,6 +82,11 @@ export const PostItemTitle = styled.h1`
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+
+  ${media.lessThan('large')`
+    width: auto;
+    white-space: normal;
+  `}
 `;
 
 export const PostItemDescription = styled.p`

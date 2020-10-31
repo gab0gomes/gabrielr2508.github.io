@@ -6,6 +6,10 @@ export const PostWrapper = styled.section`
   height: 100vh;
   overflow-y: scroll;
   border-left: 1px solid var(--light-blue);
+
+  ${media.lessThan('large')`
+    width: 100%;
+  `}
 `;
 
 export const PostBar = styled.section`
@@ -15,6 +19,13 @@ export const PostBar = styled.section`
   align-items: center;
   border-bottom: 1px solid var(--light-blue);
   padding: 0 max(3rem, calc((100% - 960px + 12rem) / 2));
+
+  ${media.lessThan('small')`
+    flex-direction: column;
+    height: auto;
+    justify-content: flex-start;
+    padding-bottom: 1rem;
+  `}
 `;
 
 export const PostHeader = styled.header`

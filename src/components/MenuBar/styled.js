@@ -15,14 +15,15 @@ export const MenuBarWrapper = styled.aside`
   width: var(--menuBarWidth);
   transition: background 0.5s;
 
-  /* ${media.lessThan('large')`
-    border-top: 1px solid var(--borders);
-    bottom: 0;
+  ${media.lessThan('large')`
+    border-bottom: 1px solid var(--borders);
+    border-right: none;
     flex-direction: row;
-    height: auto;
+    height: var(--menuBarWidth);
     padding: 0;
+    top: 0;
     width: 100%;
-  `}; */
+  `};
 `;
 
 export const MenuBarGroup = styled.div`
@@ -54,6 +55,14 @@ export const MenuBarItem = styled.span`
   width: var(--menuBarWidth);
   transition: color 0.5s;
 
+  ${media.lessThan("large")`
+    height: var(--menuBarWidth);
+    width: auto;
+    &:hover {
+      color: var(--highlight);
+    }
+  `}
+
   &.light {
     color: #ff9a3c;
 
@@ -76,6 +85,20 @@ export const MenuBarItem = styled.span`
     font-size: 1.5rem;
   }
 
+  &.horizontal {
+    height: var(--menuBarWidth);
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 1rem 3rem;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+
+    ${media.lessThan('small')`
+      padding: 1rem 1rem;
+    `};
+  }
+
   &.menu {
     background-color: var(--guava-pink);
     color: var(--white);
@@ -86,6 +109,11 @@ export const MenuBarItem = styled.span`
       color: var(--white);
       background-color: var(--dark);
     }
+
+    ${media.lessThan('large')`
+      height: var(--menuBarWidth);
+      width: 5rem;
+    `};
   }
 
   &.display {
@@ -93,17 +121,4 @@ export const MenuBarItem = styled.span`
       display: none;
     `}
   }
-
-  ${media.greaterThan("large")`
-    &:hover {
-      color: var(--highlight);
-    }
-  `}
-
-  ${media.lessThan("large")`
-    height: 3.2rem;
-    padding: .9rem;
-    position: relative;
-    width: 3.2rem;
-  `}
 `;

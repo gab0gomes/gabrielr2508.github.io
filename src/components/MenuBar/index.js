@@ -1,8 +1,7 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
-
-import { SearchAlt2 as Search } from '@styled-icons/boxicons-solid/SearchAlt2';
+import { useMediaQuery } from 'react-responsive';
 
 import { MenuAltLeft as Menu } from '@styled-icons/boxicons-regular/MenuAltLeft';
 
@@ -10,6 +9,8 @@ import * as S from './styled';
 
 import SocialLinks from '../SocialLinks';
 import getThemeColors from '../../utils/getThemeColors';
+
+import SearchButton from '../SearchButton';
 
 const MenuBar = ({ onMenuClick }) => {
   const {
@@ -30,6 +31,10 @@ const MenuBar = ({ onMenuClick }) => {
       `
   );
 
+  const isDesktopOrLaptop = useMediaQuery({
+    query: '(min-device-width: 1170px)'
+  });
+
   return (
     <S.MenuBarWrapper>
       <S.MenuBarGroup>
@@ -48,7 +53,7 @@ const MenuBar = ({ onMenuClick }) => {
           bg={getThemeColors()}
           duration={0.6}
         >
-          <S.MenuBarItem className="vertical">
+          <S.MenuBarItem className={(isDesktopOrLaptop ? 'vertical' : 'horizontal')}>
             { title }
           </S.MenuBarItem>
         </S.MenuBarLink>
@@ -56,6 +61,10 @@ const MenuBar = ({ onMenuClick }) => {
       <S.MenuBarGroup>
           <SocialLinks />
       </S.MenuBarGroup>
+      {
+        document.location.pathname !== '/search'
+        && <SearchButton />
+      }
     </S.MenuBarWrapper>
   );
 };

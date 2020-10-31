@@ -1,5 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import { useMediaQuery } from 'react-responsive'
 
 import Layout from '../components/Layout';
 import SEO from '../components/seo';
@@ -15,6 +16,9 @@ const BlogPost = ({ data, pageContext }) => {
   const post = data.markdownRemark;
   const next = pageContext.nextPost;
   const previous = pageContext.previousPost;
+  const isDesktopOrLaptop = useMediaQuery({
+    query: '(min-device-width: 1170px)',
+  });
 
   return (
     <Layout>
@@ -23,7 +27,10 @@ const BlogPost = ({ data, pageContext }) => {
         description={ post.frontmatter.description }
         image={ post.frontmatter.image.childImageSharp.fluid.src }
       />
-      <Search />
+      {
+        isDesktopOrLaptop
+        && <Search />
+      }
       <S.PostWrapper>
         <S.PostBar id="post-bar">
           <S.PostDate>

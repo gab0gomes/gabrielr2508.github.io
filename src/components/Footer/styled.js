@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import media from 'styled-media-query';
 
 export const FooterWrapper = styled.footer`
   display: flex;
@@ -11,6 +12,10 @@ export const FooterWrapper = styled.footer`
   align-items: center;
   width: inherit;
   padding: 0 max(3rem, calc((var(--postWidth) - 960px + 12rem) / 2));
+
+  ${media.lessThan('large')`
+    padding: 0 max(3rem, calc((100% - 960px + 12rem) / 2));
+  `};
 `;
 
 export const FooterAuthor = styled.div`

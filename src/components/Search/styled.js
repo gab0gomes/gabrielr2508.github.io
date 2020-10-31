@@ -10,6 +10,10 @@ export const SearchWrapper = styled.section`
   height: 100vh;
   overflow-y: scroll;
 
+  ${media.lessThan('large')`
+    width: 100vw;
+  `}
+
   .ais-InstantSearch__root {
     display: flex;
     flex-direction: column;
@@ -18,19 +22,11 @@ export const SearchWrapper = styled.section`
   }
   .ais-SearchBox {
     padding: 0;
-
-    /* ${media.lessThan('large')`
-      padding: 0.5rem 1rem;
-    `} */
   }
   .ais-Stats {
     padding: 0.5rem 2rem;
     color: var(--texts);
     font-size: .8rem;
-
-    /* ${media.lessThan('large')`
-      padding: 0.5rem 1rem;
-    `} */
   }
   .ais-SearchBox-input {
     background: none;
@@ -88,5 +84,11 @@ export const SearchWrapper = styled.section`
   .ais-Pagination-link--selected {
     color: var(--highlight);
     text-decoration: none;
+  }
+
+  .ais-Hits-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 `;

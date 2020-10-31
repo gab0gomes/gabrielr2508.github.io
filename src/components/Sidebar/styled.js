@@ -15,12 +15,9 @@ export const SidebarContent = styled.aside`
   transition: background 0.5s, margin .5s;
 
 
-  /* ${media.lessThan('large')`
-    align-items: flex-start;
-    height: auto;
-    padding: 1rem 2rem;
-    width: 100%;
-  `}; */
+  ${media.lessThan('large')`
+    left: -22rem;
+  `};
   .slide & {
     margin-left: calc(20rem + var(--menuBarWidth)) !important;
   }
